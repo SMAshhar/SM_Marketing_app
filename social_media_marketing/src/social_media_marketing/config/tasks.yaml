@@ -1,0 +1,36 @@
+analyze_business:
+  description: >
+    Analyze {company_website} and {company_document} to extract insights on 
+    {company_name}'s brand identity, value proposition, industry trends, and target market.  
+    Identify key strengths, unique selling points, and competitive advantages 
+    relevant to social media marketing.
+  expected_output: >
+    A structured, quantified where possible, list of 10 key marketing insights, including:
+    - Brand positioning
+    - Unique selling points
+    - Industry trends
+    - Target audience profile
+    - Social media content themes
+    - Competitor differentiators
+    - Customer pain points
+    - Engagement strategies
+    - Recommended content types
+    - Posting frequency & best practices
+  agent: business_analyst
+
+
+conduct_market_research:
+  description: >
+    Analyze the current market landscape for {company_name} by identifying its 
+    ideal target audience, ongoing industry trends, and competitor strategies.  
+    Gather insights on consumer behavior, engagement patterns, and content preferences 
+    that will shape an effective social media strategy.
+  expected_output: >
+    A structured report with:
+    - Target audience demographics (age, location, interests, behaviors)
+    - Key industry trends affecting {company_name}
+    - Competitor analysis (strengths, weaknesses, engagement strategies)
+    - Preferred content types for {company_name}'s audience
+    - Suggested tone and messaging style
+    - Recommended platforms and posting frequency  
+  agent: market_researcher
