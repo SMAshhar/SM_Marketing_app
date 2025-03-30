@@ -34,3 +34,15 @@ conduct_market_research:
     - Suggested tone and messaging style
     - Recommended platforms and posting frequency  
   agent: market_researcher
+
+generate_social_media_content:
+  description: >
+    Based on the insights provided by the market_researcher and marketing_strategist agents, craft engaging social media posts tailored for LinkedIn, Facebook, and X (Twitter)
+    for social media marketing. Ensure the messaging aligns with {company_name}'s brand voice and target audience.
+  expected_output: >
+    Return a structured JSON response containing:
+    - A post for Facebook, formatted to drive engagement.
+    - A professional LinkedIn post tailored for thought leadership.
+    - A concise and engaging X (Twitter) post.
+    - The URL (ONLY) for the image generated using the generateLogoFunction tool.
+  agent: content_strategist

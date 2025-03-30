@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import sys
 import warnings
+import pandas as pd
 
 from datetime import datetime
 
@@ -20,8 +21,8 @@ def run():
     inputs = {
         'topic': 'AI LLMs',
         'current_year': str(datetime.now().year),
-        'company_name':"valve",
-        'company_website':'https://www.valvesoftware.com/en/', 
+        'company_name':"Sujing",
+        'company_website':'https://sujing.com.pk', 
         'company_document':''
     }
     
@@ -29,7 +30,13 @@ def run():
         SocialMediaMarketing().crew().kickoff(inputs=inputs)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
-
+    
+    # try:
+    #     print("Here is the SOcial Media Marketing", SocialMediaMarketing)
+    #     social_media = SocialMediaMarketing()
+    #     social_media.costing()
+    # except Exception as e:
+    #     raise Exception(f"An error occurred while running the crew: {e}")
 
 def train():
     """

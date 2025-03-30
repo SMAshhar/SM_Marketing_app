@@ -1,10 +1,108 @@
 # SocialMediaMarketing Crew
 
-Welcome to the SocialMediaMarketing Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the SocialMediaMarketing Crew project, powered by [crewAI](https://crewai.com). This t   emplate is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
 ## Installation
 
 Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+
+# Agentic AI-Powered Social Media Marketing App
+
+## Overview
+The **Agentic AI-powered Social Media Marketing App** is a desktop application that automates social media content creation and scheduling. Using an **agentic system powered by  [CrewAI](https://crewai.com)**, this app analyzes businesses, conducts market research, and generates optimized social media posts.
+
+## Key Features
+- **Business Analysis & Market Research** (One-time per client)
+- **Automated Social Media Post Generation** (Recurring for weeks)
+- **Custom AI-Generated Images**
+- **Multi-Platform Optimization** (LinkedIn, X/Twitter, Facebook, etc.)
+- **Post Scheduling for Engagement Optimization**
+
+---
+
+## Workflow
+The application is structured into three agentic subsystems:
+
+### **1. Business Analysis Agents (One-time per Client)**
+- Extracts key business details like mission, products, services, tone, and branding.
+- Outputs structured data to be used for content generation.
+
+**Agents:**
+- **Business Profiler:** Analyzes the company’s website and documents to understand its offerings.
+- **Brand Identity Expert:** Defines brand voice, messaging style, and values.
+- **Target Market Analyzer:** Identifies ideal customers, their preferences, and key demographics.
+
+### **2. Market Research Agents (One-time per Client)**
+- Studies industry trends, competitors, and audience behavior.
+- Provides strategic insights for post optimization.
+
+**Agents:**
+- **Competitor Analyst:** Monitors social media activities of competitors.
+- **Industry Trend Tracker:** Analyzes trending topics in the client’s industry.
+- **Engagement Strategist:** Studies what type of content performs best.
+
+### **3. Content Generation Agents (Recurring, Based on Analysis Data)**
+- Uses business and market research insights to generate high-quality posts.
+- Creates **platform-specific** posts for LinkedIn, Facebook, and X/Twitter.
+- Generates **custom images** with AI (DALL·E API).
+
+**Agents:**
+- **Content Strategist:** Crafts social media posts tailored to each platform.
+- **Visual Content Generator:** Uses AI to generate relevant images.
+- **Post Scheduler:** Schedules posts for maximum engagement.
+
+### **Example Output Format (JSON)**
+```json
+{
+  "facebook_post": "A post tailored for Facebook",
+  "linkedin_post": "A post tailored for LinkedIn",
+  "x_post": "A post tailored for X/Twitter",
+  "url_from_DALL-E": "https://image-generated-url.com"
+}
+```
+
+---
+
+## Installation & Usage
+### **Requirements**
+- Python 3.9+
+- CrewAI
+- FastAPI
+- OpenAI API (for DALL·E & LLMs)
+
+### **Setup**
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/agentic-social-media-app.git
+   cd agentic-social-media-app
+   ```
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```sh
+   python main.py
+   ```
+
+---
+
+## Future Enhancements
+- **Multi-Client Support**
+- **Integration with Social Media APIs for Direct Posting**
+- **Performance Analytics on Engagement & Reach**
+- **More AI Models for Image & Video Generation**
+
+---
+
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+---
+
+## License
+MIT License
+
 
 First, if you haven't already, install uv:
 
@@ -20,7 +118,7 @@ crewai install
 ```
 ### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+**Add your `OPENAI_API_KEY`, `GEMINI_API_KEY` and `MODEL_NAME` into the `.env` file**
 
 - Modify `src/social_media_marketing/config/agents.yaml` to define your agents
 - Modify `src/social_media_marketing/config/tasks.yaml` to define your tasks
